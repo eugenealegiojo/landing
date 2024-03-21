@@ -1,0 +1,37 @@
+// Define icons inside the /assets/svg/ folder
+$svg-icons: (
+    'play-circle': (path: 'play-circle.svg', size: 124px),
+    'eye': (path: 'eye.svg', size: 48px),
+    'paint-brush': (path: 'paint-brush.svg', size: 48px),
+    'swatchbook': (path: 'swatchbook.svg', size: 48px),
+    'image': (path: 'image.svg', size: 48px),
+    'smile-beam': (path: 'smile-beam.svg', size: 48px),
+    'check-circle': (path: 'check-circle.svg', size: 48px),
+    'star': (path: 'star-solid.svg', size: 16px),
+    'envelope': (path: 'envelope.svg', size: 48px),
+    'poll': (path: 'poll.svg', size: 48px),
+    'id-badge': (path: 'id-badge.svg', size: 48px),
+);
+
+// Define mixin to generate styles for SVG icons
+@mixin svg-icon($name) {
+    $icon-data: map-get($svg-icons, $name);
+    $icon-path: map-get($icon-data, 'path');
+    $icon-size: map-get($icon-data, 'size');
+  
+    .#{$name}-icon {
+        width: $icon-size;
+        height: $icon-size;
+        background-image: url('/assets/svg/#{$icon-path}');
+        background-repeat: no-repeat;
+        background-position: center;
+        content: '';
+    }
+}
+
+// Define mixin to generate styles for all SVG icons
+@mixin generate-svg-icons {
+    @each $icon, $data in $svg-icons {
+        @include svg-icon($icon);
+    }
+}
