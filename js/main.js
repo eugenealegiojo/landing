@@ -29,7 +29,7 @@ function onYouTubeIframeAPIReady() {
                 // Mute player in case its not working. 
                 // Works on my local (Chrome, FF, MS Edge, Safari).
                 // player.mute();
-            
+                
                 playButton.onclick = function() {
                     videoPlayerWrap.classList.add('playing');
                     player.playVideo();
