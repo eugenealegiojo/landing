@@ -22,8 +22,20 @@ function onYouTubeIframeAPIReady() {
             wmode: "transparent"
         },
         events: {
-            onReady: onPlayerReady,
-            onStateChange: function(event){
+            onReady: (event) => {
+                let videoPlayerWrap = document.getElementById('video-player-wrap');
+                let playButton = document.getElementById("play-button");
+
+                // Mute player in case its not working. 
+                // Works on my local (Chrome, FF, MS Edge, Safari).
+                // player.mute();
+            
+                playButton.onclick = function() {
+                    videoPlayerWrap.classList.add('playing');
+                    player.playVideo();
+                };
+            },
+            onStateChange: (event) => {
                 // On pause
                 if (event.data == 2) {
                 }
@@ -36,18 +48,4 @@ function onYouTubeIframeAPIReady() {
             }
         }
      });
-}
-
-function onPlayerReady(event) {
-    let videoPlayerWrap = document.getElementById('video-player-wrap');
-    let playButton = document.getElementById("play-button");
-
-    // Mute player in case its not working. 
-    // Works on my local (Chrome, FF, MS Edge, Safari).
-    // player.mute();
-
-    playButton.onclick = function() {
-        videoPlayerWrap.classList.add('playing');
-        player.playVideo();
-    };
 }

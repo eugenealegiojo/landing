@@ -1,15 +1,114 @@
 
-// Large
-@media (max-width: $breakpoint-large) {
-    
+// Medium
+@media (max-width: $breakpoint-medium) {
+    .container {
+        padding: 20px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .features:first-child {
+        padding-top: 260px;
+    }
+
+    .testimonials .cta-wrap {
+        padding: 40px 0 0;
+    }
+
+    .features {
+        &.secondary .container:not(:last-child) {
+            padding-bottom: 40px;
+        }
+    }
+
+    .hero-section {
+        min-height: auto;
+    }
 }
 
 // Medium
-@media (max-width: $breakpoint-medium) {
-    
+@media (max-width: 840px ) {
+    header {
+        .video-demo {
+            bottom: -180px;
+        }
+    }
 }
 
-// Small
-@media (max-width: $breakpoint-small) {
+@media screen and (max-width: $breakpoint-small) {
+    .cta-wrap {
+        .cta-actions {
+            gap: 25px;
+        }
+        padding-bottom: 25px;
+    }
+
+    header {
+        .video-demo {
+            bottom: -150px;
     
+            .play-button {
+                background-size: 80px;
+                height: 90px;
+                width: 90px;
+            }
+        }
+    }
+    .features:first-child {
+        padding-top: 200px;
+    }
+
+    .row {
+        &.item-2 .item {
+            flex: 0 0 calc((100% - 20px)/ 2);
+
+            .hero-text {
+                padding: 10px;
+            }
+        }
+    }
 }
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 570px;
+        .video-demo {
+            bottom: -100px;
+
+            .play-button {
+                background-size: 54px;
+                height: 60px;
+                width: 60px;
+            }
+        }
+        h1 {
+            font-size: 35px;
+        }
+        .cta-text {
+            font-size: 15px;
+            padding: 25px 0;
+        }
+    }
+    .btn {
+        font-size: 15px;
+        padding: 15px;
+        width: 220px;
+    }
+    .features:first-child {
+        padding-top: 130px;
+    }
+
+    .row {
+        &.item-2 .item {
+            &:not(last-child) {
+                padding-bottom: 20px;
+            }
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    }
+}
+
+

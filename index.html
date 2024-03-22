@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/dist/css/main.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    
 </head>
 <body>
     <header id="header">
@@ -31,25 +30,26 @@
                         <a href="#" class="btn btn-primary">Get WPForms Now</a>
                     </div>
                 </div><!-- // .cta-actions -->
-            </div>
+            </div> <!-- // .cta-wrap -->
 
             <div id="video-player-wrap" class="video-demo">   
                 <div class="video-thumbnail">
-                    <img src="assets/images/video-thumbnail.png" alt="Quickly create distraction-free form landing pages without hiring a developer or writing code" width="960" height="540" srcset="">
+                    <img src="assets/images/video-thumbnail.png" alt="Quickly create distraction-free form landing pages without hiring a developer or writing code" srcset="">
                     <div id="play-button" class="play-button play-circle-icon"></div>
                 </div>
-                <div id="video-player" class="video-player">
-                    
-               </div>
-            </div> <!-- // .video-demo -->
+                <div class="video-container">
+                    <div id="video-player" class="video-player"></div>
+                </div>
+            </div> <!-- // #video-player-wrap -->
+            
         </div> <!-- // .container -->
     </header> <!-- // header -->
 
     <main id="main">
         <section class="features">
             <div class="container">
-                <div class="row item-3">
-                    <div class="item">
+                <div class="grid">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon eye-icon"></div>
                             <h3 class="item-heading">Distraction Free Landing Pages</h3>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon paint-brush-icon"></div>
                             <h3 class="item-heading">Multiple Styles to Choose From</h3>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon swatchbook-icon"></div>
                             <h3 class="item-heading">Pre-made & Custom itemor Schemes</h3>
@@ -76,9 +76,7 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- // .row -->
-                <div class="row item-3">
-                    <div class="item">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon image-icon"></div>
                             <h3 class="item-heading">Custom Logo Support</h3>
@@ -87,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon smile-beam-icon"></div>
                             <h3 class="item-heading">No Coding Knowledge Required</h3>
@@ -96,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon check-circle-icon"></div>
                             <h3 class="item-heading">Quick & Easy Setup</h3>
@@ -105,13 +103,13 @@
                             </div>
                         </div>
                     </div>       
-                </div> <!-- // .row -->
+                </div> <!-- // .grid -->
             </div> <!-- // .container -->
         </section> <!-- // section.features -->
         
         <section class="testimonials">
             <div class="container">
-                <div class="row item-3">
+                <div class="grid">
                     <div class="item testimonial-item">
                         <div class="item-content">
                             <blockquote>
@@ -147,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- // .row -->
+                </div> <!-- // .grid -->
                 <div class="cta-wrap">
                     <div class="row cta-actions">
                         <div class="item">
@@ -159,14 +157,15 @@
                     </div> <!-- // .cta-actions -->
                 </div> <!-- // .cta-wrap -->
             </div> <!-- // .container -->
-            
         </section> <!-- // section.testimonials -->
         
         <section class="hero-section">
             <div class="container">
                 <div class="row item-2">
-                    <div class="item image-demo">
-                        <img src="/assets/images/screenshot-01.png" alt="" width="457" height="600" />
+                    <div class="item">
+                        <div class="image-demo">
+                            <img src="/assets/images/screenshot-01.png" alt="" width="457" height="600" />
+                        </div>
                     </div>
                     <div class="item">
                         <h3>Gain Control of Your Forms</h3>
@@ -188,10 +187,10 @@
         <section class="features secondary">
             <div class="container">
                 <h3>Form Pages by WPForms is an exceptional Google Forms alternative for WordPress, and you can use it to create custom landing pages for:</h3>
-            </div>
+            </div> <!-- // .container -->
             <div class="container">
-                <div class="row item-3">
-                    <div class="item">
+                <div class="grid">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon envelope-icon"></div>
                             <h3 class="item-heading">Lead Generation</h3>
@@ -199,7 +198,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon poll-icon"></div>
                             <h3 class="item-heading">Surveys</h3>
@@ -207,7 +206,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item item--divider">
                         <div class="item-content">
                             <div class="item-icon id-badge-icon"></div>
                             <h3 class="item-heading">Membership Sites</h3>
@@ -215,19 +214,20 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- // .row -->
-            </div>
+                </div> <!-- // .grid -->
+            </div> <!-- // .container -->
 
             <div class="container aligncenter">
                 <h3>We took the pain out of creating form landing pages and made it easy.</h3>
                 <div>What are you waiting for? <a href="#">Create custom form landing pages with WPForms today!</a></div>
-            </div> <!-- // .features -->
+            </div> <!-- // .container -->
         </section> <!-- // secondary-features-->
     </main> <!-- // main -->        
 
     <footer id="footer">
 
-    </footer>
+    </footer> <!-- // footer -->
+    
     <script src="/dist/js/main.js"></script>
 </body> 
 </html>
