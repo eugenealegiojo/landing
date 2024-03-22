@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'fonts';
 @import 'icons';
-@import '_layouts';
+@import 'layouts';
 
 // Generate SVG icons
 @include generate-svg-icons;

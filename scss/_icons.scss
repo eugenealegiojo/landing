@@ -22,7 +22,7 @@ $svg-icons: (
     .#{$name}-icon {
         width: $icon-size;
         height: $icon-size;
-        background-image: url('/assets/svg/#{$icon-path}');
+        background-image: url('../../assets/svg/#{$icon-path}');
         background-repeat: no-repeat;
         background-position: center;
         content: '';
