@@ -100,10 +100,6 @@ header {
         box-shadow: 0px 10px 50px 0px #00000026;
         position: relative;
 
-        img {
-            max-width: 100%;
-        }
-
         .play-button {
             background-position: center;
             background-color: #fff;
@@ -200,6 +196,7 @@ header {
     }
 }
 img {
+    display: block;
     max-width: 100%;
 }
 a {
